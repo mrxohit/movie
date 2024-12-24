@@ -1,0 +1,148 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #111;
+    color: #eee;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    animation: colorChange 5s linear infinite alternate;
+}
+
+@keyframes colorChange {
+    from {
+        color: #e0281c;
+    }
+    to {
+        color: #007bff;
+    }
+}
+
+nav a {
+    color: #eee;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+.search-box {
+    display: flex;
+    background-color: #333;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.search-box input {
+    flex-grow: 1;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    background-color: #333;
+    color: #eee;
+}
+
+.search-box button {
+    background-color: transparent;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: #0056b3;
+}
+
+main {
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+    grid-gap: 25px;
+}
+
+.movie {
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.movie:hover {
+    transform: scale(1.05);
+}
+
+.movie img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+}
+
+.movie h3,
+.movie p {
+    padding: 10px;
+    margin: 0;
+}
+
+.download-button {
+    display: block;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 0 0 8px 8px;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #222;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
